@@ -3,7 +3,7 @@
 # Generate a self signed certificate for use in containers
 
 # Identify our exact location and ensure we are in the correct directory.
-RELDIR=$(dirname "$0")
+RELDIR=$(dirname "$(realpath "$0")")
 cd "${RELDIR}"/.. || exit 1
 
 CERT_CN="restfm.dev"
